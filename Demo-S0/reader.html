@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Coded Raw - demo client app</title>
+		<script src="reader.js"></script>
+		<style>
+			body {
+				margin: 0;
+			}
+			html, body, input {
+				font-family: 'Segoe UI', 'Arial', 'Helvetica';
+			}
+			div.loading {
+				color: #800;
+				font-weight: 300;
+				padding: 2em;
+				background: #eee;
+			}
+		</style>
+	</head>
+	<body onload="begin();">
+		<section><div id="loading">
+			<div class="loading">Loading... If you still see this, then something went wrong. <a href="mailto:dev@johnvalentine.co.uk?subject=coded_raw_reader">email</a></div>
+		</div></section>
+		<section><div id="content">
+			<button onclick="CodedRaw.getModule('S0-demo.json', CodedRaw.render);">GO</button>
+		</div></section>
+			
+	</body>
+</html>
