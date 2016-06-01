@@ -9,6 +9,7 @@ Choose a sub-folder, copy it locally, and use a pass-through web server to host 
 * an example **client app**;
 * a **JavaScript library**, which dynamically loads and invokes the functional part of the file, to return flat output;
 * a **data format** with associated **standards**.
+
 Together, these parts allow a data file to render itself. The client app, rather than dealing with the encoded data natively, then accepts simple output, such as a flat bitmap or a text stream.
 
 ## This implementation: S0
