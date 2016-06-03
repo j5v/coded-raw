@@ -35,9 +35,9 @@ CodedRaw = {
 }
 ```
 
-## Concerns
+## Security Concerns: plans for Web Workers
 
-In some environments, this might present security challenges. In a simple app in a browser environment, these concerns are reduced. Ideally, the JavaScript VM would limit the impact of potential scripting attacks.
+In some environments, injected functions might present security challenges: uncontrolled JavaScript could hijack a web session, or write data to the client file system. In a simple app in a browser environment, risks to the client file system are minimal (the construction of malicious 'downloaded' files, which a user might then mistakenly execute), but the real danger is when scripts exploit any resources available to the scope of the code. Ideally, a JavaScript VM would limit the impact of potential scripting attacks, and thankfully, more protection is offered by **Web Workers**, and we are exploring this as the safest environment for our `code` functions.
 
 ## Website
 
