@@ -2,10 +2,12 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>Coded Raw - demo client app</title>
+
 		<script src="reader.js"></script>
+
 		<style>
 			body {
-				margin: 0;
+				margin: 1em;
 			}
 			html, body, input {
 				font-family: 'Segoe UI', 'Arial', 'Helvetica';
@@ -18,12 +20,23 @@
 			}
 		</style>
 	</head>
-	<body onload="begin();">
+
+	<body onload="document.getElementById('loading').innerHTML='';">
+
 		<section><div id="loading">
+
 			<div class="loading">Loading... If you still see this, then something went wrong. <a href="mailto:dev@johnvalentine.co.uk?subject=coded_raw_reader">email</a></div>
+
 		</div></section>
+
 		<section><div id="content">
-			<button onclick="CodedRaw.getModule('S0-demo.json', CodedRaw.render);">GO</button>
+
+			<h1>Coded Raw - Demo S0</h1>
+			<p>Pressing 'go' loads a data file, interrogates it for version metadata, and then calls upon its decoder to present the embedded data.</p>
+			<p>Results are output to the Debug Console.</p>
+
+			<button onclick="CodedRaw.getModule('S0-demo.json', CodedRaw.render);">Go</button>
+
 		</div></section>
 			
 	</body>
