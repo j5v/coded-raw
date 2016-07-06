@@ -13,7 +13,18 @@ Choose a sub-folder, copy it locally, and use a pass-through web server to host 
 Together, these parts allow a data file to render itself. The client app, rather than dealing with the encoded data natively, then accepts simple output, such as a flat bitmap or a text stream.
 
 ## This implementation: S0
-The example provided in the `Demo-S0` folder is a simple client app that demonstrates the dynamic loading of a data file, calls the decoder, and shows the result in browser's Console. `S0` is the first implementation standard, and we've drafted standards `S1`, `S2`, and `S3`. The latter  will provide parameterised rendering and a choice of output formats.
+The example provided in the `Demo-S0` folder is a simple client app that demonstrates the dynamic loading of a data file, calls the decoder, and shows the result in browser's Console. `S0` is the first implementation standard, and we've drafted standards `S1`, `S2`, and `S3`. The latter will provide parameterised rendering and a choice of output formats.
+
+```
+[console]
+Requesting "S0-demo.json"
+httpRequest.status: 200
+
+Interrogating file
+File says it implements CodedRaw standard "S0:0.0.1"
+File has JSON-safe encoded raw data:  2
+File renders data as:  Content=2
+```
 
 ## What's the clever bit?
 It's a functional approach. We download the `json` data file, find out what standard it implements, then call its embedded decoder. Here's the best bit:
